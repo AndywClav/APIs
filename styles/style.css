@@ -57,6 +57,12 @@
     justify-content: center;
 }
 
+.APIs-main-div-container {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+}
+
 .Apis-h1 {
     font-size: 2rem;
     padding-bottom: 1rem;
@@ -148,4 +154,13 @@
         background-position: 0 0;
     }
     
+}
+
+@media screen and (max-width: 1000px) {
+    .APIs-btn {
+        background: linear-gradient(#f3e6ff, #d9aeff);
+        color: black;
+        transform: scale(1.1);
+        transition: background-color 2s, color 2s;
+    }
 }

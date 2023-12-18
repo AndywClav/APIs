@@ -24,7 +24,7 @@ async function header() {
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="index.html">
-                    ${pestanias.Header.Img} ${pestanias.Header.Titulo}
+                    ${pestanias.Img} ${pestanias.Titulo}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -110,10 +110,10 @@ async function header() {
             dropdownItem[2].innerHTML = `${pestanias.Header.Portugues.Idioma.Ingles}`;
             dropdownItem[3].innerHTML = `${pestanias.Header.Portugues.Idioma.Portugues}`;
         });
-    if (!pestanias) {
-            console.error('Error: datos de pestanias no disponibles');
-            return;
-        }
+        if (!pestanias) {
+                console.error('Error: datos de pestanias no disponibles');
+                return;
+            }
     } catch (error) {
         console.error(`Error al obtener los datos: ${error.message}`);
     }
