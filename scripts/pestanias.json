@@ -1,0 +1,39 @@
+{
+    "Header": {
+        "Img": "<box-icon name='game'></box-icon>",
+        "Titulo": "APIs",
+        "Español": {
+            "Inicio": "Inicio",
+            "Contactanos": "Contáctanos",
+            "Portafolio": "Portafolio",
+            "Idioma": {
+                "Idioma": "Idioma",
+                "Español": "Español",
+                "Ingles": "Inglés",
+                "Portugues": "Portugués"
+            }
+        },
+        "English": {
+            "Home": "Home",
+            "Contact_us": "Contact Us",
+            "Portfolio": "Portfolio",
+            "Language": {
+                "Language": "Language",
+                "Spanish": "Spanish",
+                "English": "English",
+                "Portuguese": "Portuguese"
+            }
+        },
+        "Portugues": {
+            "Inicio": "Início",
+            "Contacte_nos": "Contacte-nos",
+            "Portfolio": "Portfólio",
+            "Idioma": {
+                "Idioma": "Idioma",
+                "Espanhol": "Espanhol",
+                "Ingles": "Inglês",
+                "Portugues": "Português"
+            }
+        }
+    }
+}
