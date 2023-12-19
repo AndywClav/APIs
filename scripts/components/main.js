@@ -1,21 +1,29 @@
 import obtenerDatos from './obtenerDatos.js';
+import carrousel from './carrusel.js';
 
 async function main() {
-    obtenerDatos();
     try {
         const pestanias = await obtenerDatos();
         const main = document.querySelector('.Apis-main');
 
         main.innerHTML += `
-        <div class="container APIs-main-div">
+        <div class="APIs-main-div">
             <h1 class="Apis-h1">PROYECTOS</h1>
         </div>
-        <div class="container APIs-main-div">
+        <div class="APIs-main-div">
             <div class="APIs-main-div-container"></div>
+            <button class="APIs-main-div-button">
+                <box-icon type='solid' name='chevron-left' id="botonIz"></box-icon>
+            </button>
+            <button class="APIs-main-div-button">
+                <box-icon type='solid' name='chevron-right' id="botonDe"></box-icon>            
+            </button>
         </div>
         `;
 
-        const APIs_main_div = document.querySelector('.APIs-main-div-container'); 
+        const APIs_main_div = document.querySelector('.APIs-main-div-container');
+        const botonIzquierda = document.querySelector('#botonIz');
+        const botonDerecha = document.querySelector('#botonDe');
 
         if (APIs_main_div) {
             for (let i = 0; i < pestanias.Main.Contenido.length; i++) {
@@ -30,6 +38,9 @@ async function main() {
                     </div>
             `;
             }
+
+            carrousel(APIs_main_div, botonIzquierda, botonDerecha);
+
         }
 
         if (!pestanias) {

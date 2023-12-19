@@ -9,11 +9,6 @@
     box-sizing: border-box;
 }
 
-.APIs-body {
-    min-height: 100vh;
-    overflow-x: hidden;
-}
-
 /* Heander */
 
 .APIs-header, .APIs-footer {
@@ -48,6 +43,7 @@
 
 .Apis-main {
     padding: 1.5rem 0;
+    overflow-x: hidden;
 }
 
 .APIs-main-div {
@@ -55,12 +51,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.APIs-main-div-container {
-    display: flex;
-    flex-direction: row;
-    gap: 3rem;
+    position: relative;
 }
 
 .Apis-h1 {
@@ -77,11 +68,53 @@
     transform: scale(1);
 }
 
+
+.APIs-main-div-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    overflow-x: hidden;
+    position: relative;
+    padding: 3rem;
+}
+
+.APIs-main-div-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+    border: none;
+    border-radius: 100%;
+    padding: .5rem;
+    transition: all 1s;
+}
+
+.APIs-main-div-button:active {
+    transform: scale(.9);
+}
+
+.APIs-main-div-button:nth-of-type(1) {
+    left: 0;
+}
+
+.APIs-main-div-button:nth-of-type(2) {
+    right: 0;
+}
+
 .APIs-card {
     width: 18rem;
     transition: all 1s;
     box-shadow: 5px -2px 20px 0px #ead2ff;
+    filter: blur(3px);
 }
+
+.APIs-card:hover {
+    transform: scale(1.2);
+    position: relative;
+    z-index: 2;
+    filter: blur(0px);
+} 
 
 .APIs-card-body {
     display: none;
