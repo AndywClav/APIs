@@ -1,7 +1,6 @@
 import obtenerDatos from './obtenerDatos.js';
 
 async function header() {
-    obtenerDatos();
     try {
         const pestanias = await obtenerDatos();
 

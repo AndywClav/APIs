@@ -46,42 +46,42 @@
         },   
         {
             "Id": "2",
-            "Img": "https://picsum.photos/200/",
+            "Img": "https://picsum.photos/250/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"
         },   
         {
             "Id": "3",
-            "Img": "https://picsum.photos/200/",
+            "Img": "https://picsum.photos/300/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"
         },   
         {
             "Id": "4",
-            "Img": "https://picsum.photos/200/",
+            "Img": "https://picsum.photos/350/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"
         },   
         {
             "Id": "5",
-            "Img": "https://picsum.photos/200/",
+            "Img": "https://picsum.photos/400/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"
         },   
         {
-            "Id": "5",
-            "Img": "https://picsum.photos/200/",
+            "Id": "6",
+            "Img": "https://picsum.photos/450/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"
         },   
         {
-            "Id": "5",
-            "Img": "https://picsum.photos/200/",
+            "Id": "7",
+            "Img": "https://picsum.photos/500/",
             "Titulo": "Rick and Morty",
             "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
             "Enlace": "a"

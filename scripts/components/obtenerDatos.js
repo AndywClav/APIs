@@ -10,7 +10,7 @@ async function obtenerDatos() {
         return data;
     } catch (error) {
         console.error(`Error al obtener los datos: ${error.message}`);
-        throw error; // Re-lanza el error para que pueda ser manejado más arriba si es necesario
+        throw error;
     }
 }
 
