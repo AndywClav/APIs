@@ -1,5 +1,5 @@
 {
-    "Img": "<box-icon name='game'></box-icon>",
+    "Img": "<iconify-icon icon='vscode-icons:file-type-jsmap'></iconify-icon>",
     "Titulo": "APIs",
     "Header": {
         "Español": {

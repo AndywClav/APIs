@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap');
+
 /* Variables */
 
 :root {
     --Color-Header-Footer: linear-gradient(#5b148f, #430074);
-    --Color-Fuente-principal: #fbf3ff
+    --Color-Fuente-principal: #fbf3ff;
 }
 
 * {
     box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
 }
 
 /* Heander */
@@ -19,7 +25,15 @@
 /* Navbar */
 
 .nav-link, .navbar-brand{
-    color: var(--Color-Fuente-principal) !important;
+    color: var(--Color-Fuente-principal); 
+    border-radius: 10px;
+    padding: .3rem .5rem;
+    transition: all .5s;
+}
+
+.nav-link:hover {
+    background-color: yellow;
+    color: black;
 }
 
 .navbar-toggler {
@@ -37,6 +51,8 @@
 .APIs-navbar-nav.navbar-nav {
     display: flex;
     align-items: center;
+    gap: 1rem;
+    font-weight: bold;
 }
 
 /* MAIN */
@@ -50,15 +66,39 @@
 }
 
 .Apis-h1 {
+    margin-bottom: 2rem;
+}
+
+.APIs-main-descripcion {
+    border-radius: 73px;
+    padding: 1rem 2rem 1rem 2rem;
+    margin-top: 2rem;
+    background: #e0b0ff;
+    text-align: center;
+    transition: all 1s;
+}
+
+.APIs-main-descripcion:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.APIs-main-descripcion-parrafo {
+    display: inline;
+    font-size: 1.2em;
+}
+
+.Apis-h1, .Apis-h2 {
+    font-family: 'Heebo', sans-serif;
+    color: #cb1ad5;
     font-size: 2rem;
     padding: 2rem 0 1rem 0;
-    margin: 0;
     transform: scale(1.5);
     transition: all 1s;
     cursor: default;
 }
 
-.Apis-h1:hover {
+.Apis-h1:hover, .Apis-h2:hover {
     background-color: transparent;
     transform: scale(1);
 }
@@ -69,7 +109,7 @@
     flex-direction: row;
     gap: 1rem;
     position: relative;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .APIs-main-div-button {

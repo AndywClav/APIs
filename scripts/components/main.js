@@ -8,7 +8,15 @@ async function main() {
 
         main.innerHTML += `
         <div class="APIs-main-div">
-            <h1 class="Apis-h1">PROYECTOS</h1>
+            
+            <div class="APIs-main-descripcion">
+                
+                <p>Descubre el futuro de la innovación y la tecnología en <span>APIs</span>. Explora proyectos emocionantes, sumérgete en experiencias interactivas y deslízate por nuestro carrusel visualmente impactante. En <span>APIs</span>, fusionamos la creatividad con la tecnología para ofrecer soluciones vanguardistas. ¡Explora, aprende y disfruta del emocionante cruce entre el arte y la innovación!</p>
+                <p class="APIs-main-descripcion-parrafo">¡Bienvenido a un espacio donde la tecnología cobra vida de manera creativa!</p>
+            </div>
+        </div>
+        <div class="APIs-main-div">
+            <h2 class="Apis-h2">PROYECTOS</h2>
         </div>
         <div class="APIs-main-div swiper mySwiper">
             <div class="APIs-main-div-container swiper-wrapper"></div>

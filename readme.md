@@ -7,6 +7,6 @@ El proyecto consiste en la creación de una página web de una sola página (SPA
 - Favicon 
     - [iconos creados por Smashicons - **flaticon.es**](https://www.flaticon.es/iconos-gratis/api)
 - Logo Principal
-    - [iconos creados por boxicons - **boxicons.com**](https://boxicons.com/)
+    - [iconos creados por iconify - **iconify.design**](https://iconify.design/)
 - Carrousel
     - [Carousel Swipper **Swipper.com**pper](https://swiperjs.com/)
