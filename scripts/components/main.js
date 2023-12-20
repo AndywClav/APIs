@@ -1,5 +1,5 @@
 import obtenerDatos from './obtenerDatos.js';
-import carrousel from './carrusel.js';
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 async function main() {
     try {
@@ -10,26 +10,22 @@ async function main() {
         <div class="APIs-main-div">
             <h1 class="Apis-h1">PROYECTOS</h1>
         </div>
-        <div class="APIs-main-div">
-            <div class="APIs-main-div-container"></div>
-            <button class="APIs-main-div-button">
-                <box-icon type='solid' name='chevron-left' id="botonIz"></box-icon>
-            </button>
-            <button class="APIs-main-div-button">
-                <box-icon type='solid' name='chevron-right' id="botonDe"></box-icon>            
-            </button>
+        <div class="APIs-main-div swiper mySwiper">
+            <div class="APIs-main-div-container swiper-wrapper"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
         </div>
         `;
 
         const APIs_main_div = document.querySelector('.APIs-main-div-container');
-        const botonIzquierda = document.querySelector('#botonIz');
-        const botonDerecha = document.querySelector('#botonDe');
 
         if (APIs_main_div) {
             for (let i = 0; i < pestanias.Main.Contenido.length; i++) {
                 APIs_main_div.innerHTML += `
-                    <div class="card APIs-card">
-                        <img src="${pestanias.Main.Contenido[i].Img}" class="card-img-top" alt="...">
+                    <div class="card APIs-card swiper-slide">
+                        <img src="${pestanias.Main.Contenido[i].Img}" class="card-img-top" alt="..." loading="lazy">
+                        <div class="swiper-lazy-preloader swiper-lazy-preloader-blue"></div>
                         <div class="card-body APIs-card-body">
                             <h5 class="card-title">${pestanias.Main.Contenido[i].Titulo}</h5>
                             <p class="card-text">${pestanias.Main.Contenido[i].Descripcion}</p>
@@ -38,10 +34,30 @@ async function main() {
                     </div>
             `;
             }
-
-            carrousel(APIs_main_div, botonIzquierda, botonDerecha);
-
         }
+
+        const swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+            },
+            lazy: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            loop: true,
+        });
 
         if (!pestanias) {
             console.error('Error: datos de pestanias no disponibles');
