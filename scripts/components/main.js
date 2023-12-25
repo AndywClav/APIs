@@ -1,28 +1,31 @@
-import obtenerDatos from './obtenerDatos.js';
+import mainPrincipal from '../Apis/mainPrincipal.js';
+import rickAndMortyInicio from './rickAndMorty/inicio.js'
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
-async function main() {
+export default async function main() {
     try {
-        const pestanias = await obtenerDatos();
+        const pestanias = await mainPrincipal();
         const main = document.querySelector('.Apis-main');
 
         main.innerHTML += `
-        <div class="APIs-main-div">
-            
-            <div class="APIs-main-descripcion">
+        <div class="container-APIs-main">
+            <div class="APIs-main-div">
                 
-                <p>Descubre el futuro de la innovación y la tecnología en <span>APIs</span>. Explora proyectos emocionantes, sumérgete en experiencias interactivas y deslízate por nuestro carrusel visualmente impactante. En <span>APIs</span>, fusionamos la creatividad con la tecnología para ofrecer soluciones vanguardistas. ¡Explora, aprende y disfruta del emocionante cruce entre el arte y la innovación!</p>
-                <p class="APIs-main-descripcion-parrafo">¡Bienvenido a un espacio donde la tecnología cobra vida de manera creativa!</p>
+                <div class="APIs-main-descripcion">
+                    
+                    <p>Descubre el futuro de la innovación y la tecnología en <span>APIs</span>. Explora proyectos emocionantes, sumérgete en experiencias interactivas y deslízate por nuestro carrusel visualmente impactante. En <span>APIs</span>, fusionamos la creatividad con la tecnología para ofrecer soluciones vanguardistas. ¡Explora, aprende y disfruta del emocionante cruce entre el arte y la innovación!</p>
+                    <p class="APIs-main-descripcion-parrafo">¡Bienvenido a un espacio donde la tecnología cobra vida de manera creativa!</p>
+                </div>
             </div>
-        </div>
-        <div class="APIs-main-div">
-            <h2 class="Apis-h2">PROYECTOS</h2>
-        </div>
-        <div class="APIs-main-div swiper mySwiper">
-            <div class="APIs-main-div-container swiper-wrapper"></div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-pagination"></div>
+            <div class="APIs-main-div">
+                <h2 class="Apis-h2">PROYECTOS</h2>
+            </div>
+            <div class="APIs-main-div swiper mySwiper">
+                <div class="APIs-main-div-container swiper-wrapper"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
         `;
 
@@ -32,12 +35,12 @@ async function main() {
             for (let i = 0; i < pestanias.Main.Contenido.length; i++) {
                 APIs_main_div.innerHTML += `
                     <div class="card APIs-card swiper-slide">
-                        <img src="${pestanias.Main.Contenido[i].Img}" class="card-img-top" alt="..." loading="lazy">
+                        <img src="${pestanias.Main.Contenido[i].Img}" class="card-img-top" alt="${pestanias.Main.Contenido[i].Titulo}" loading="lazy">
                         <div class="swiper-lazy-preloader swiper-lazy-preloader-blue"></div>
                         <div class="card-body APIs-card-body">
                             <h5 class="card-title">${pestanias.Main.Contenido[i].Titulo}</h5>
                             <p class="card-text">${pestanias.Main.Contenido[i].Descripcion}</p>
-                            <a href="${pestanias.Main.Contenido[i].Enlace}" class="btn APIs-btn">🚀 ¡A explorar el lugar! 👀</a>
+                            <a href="${pestanias.Main.Contenido[i].Enlace}" id="card-link-${i}" class="btn APIs-btn">🚀 ¡A explorar el lugar! 👀</a>
                         </div>
                     </div>
             `;
@@ -64,8 +67,9 @@ async function main() {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
-            loop: true,
         });
+
+        rickAndMortyInicio();
 
         if (!pestanias) {
             console.error('Error: datos de pestanias no disponibles');
@@ -75,5 +79,3 @@ async function main() {
         console.error(`Error al obtener los datos: ${error.message}`);
     }
 }
-
-export default main;

@@ -1,8 +1,8 @@
-import obtenerDatos from './obtenerDatos.js';
+import mainPrincipal from '../Apis/mainPrincipal.js';
 
 async function footer() {
     try {
-        const pestanias = await obtenerDatos();
+        const pestanias = await mainPrincipal();
 
         const footer = document.querySelector('.APIs-footer');
         

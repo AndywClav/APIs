@@ -1,8 +1,8 @@
-import obtenerDatos from './obtenerDatos.js';
+import mainPrincipal from '../Apis/mainPrincipal.js';
 
 async function header() {
     try {
-        const pestanias = await obtenerDatos();
+        const pestanias = await mainPrincipal();
 
         const header = document.querySelector('.APIs-header');
         

@@ -1,17 +1,17 @@
 const URL = 'https://rickandmortyapi.com/api';
 
-const getCharacter = async (id) => { 
+const personaje = async (id) => { 
     const respuesta = await fetch(`${URL}/character/${id}`);
-    const data = await respuesta.json();
-    console.log(data);
-    return data;
+    const datos = await respuesta.json();
+    console.log(datos);
+    return datos;
 }
 
-const getCharacters = async (page) => {
+const personajes = async (page) => {
     const respuesta = await fetch(`${URL}/character/?page=${page}`);
-    const data = await respuesta.json();
-    console.log(data);
-    return data;
+    const datos = await respuesta.json();
+    console.log(datos);
+    return datos;
 }
 
-export { getCharacter, getCharacters };
+export { personaje, personajes };

@@ -1,4 +1,4 @@
-async function obtenerDatos() {
+export default async function mainPrincipal() {
     try {
         const response = await fetch("/pestanias.json");
 
@@ -13,5 +13,3 @@ async function obtenerDatos() {
         throw error;
     }
 }
-
-export default obtenerDatos;
