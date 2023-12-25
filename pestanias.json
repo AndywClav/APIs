@@ -40,15 +40,15 @@
         "Contenido": [{
             "Id": "1",
             "Img": "./assets/img/rickAndMortyPortada.webp",
-            "Titulo": "Rick and Morty",
-            "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares..",
+            "Titulo": "Rick y Morty",
+            "Descripcion": "La API de Rick and Morty simplifica la obtención de datos clave sobre personajes, episodios y lugares.",
             "Enlace": "a"
         },   
         {
             "Id": "2",
             "Img": "https://picsum.photos/250/",
-            "Titulo": "Otra api",
-            "Descripcion": "lorem2",
+            "Titulo": "Clima",
+            "Descripcion": "La API del clima brinda Pronósticos y análisis con datos de temperatura, humedad y viento. Esencial para profesionales. ¡Explora el clima",
             "Enlace": "a"
         }]
     }

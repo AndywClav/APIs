@@ -8,7 +8,7 @@ export default async function main() {
         const main = document.querySelector('.Apis-main');
 
         main.innerHTML += `
-        <div class="container-APIs-main">
+        <div class="container-APIs-main container">
             <div class="APIs-main-div">
                 
                 <div class="APIs-main-descripcion">
