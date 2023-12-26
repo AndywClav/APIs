@@ -24,6 +24,12 @@ body {
     color: var(--Color-Fuente-principal);
 }
 
+.APIs-header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 /* Navbar */
 
 .nav-link, .navbar-brand{

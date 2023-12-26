@@ -1,9 +1,9 @@
-import header from './components/header.js';
-import main from './components/main.js';
-import footer from './components/footer.js';
+import Header from "../components/ui/Header.js";
+import Carrousel from "../components/ui/Carrousel.js";
+import Footer from "../components/ui/Footer.js";
 
 document.addEventListener('DOMContentLoaded', () => {
-    header();
-    main();
-    footer();
+    Header();
+    Carrousel();
+    Footer();
 });

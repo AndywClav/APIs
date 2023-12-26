@@ -1,5 +1,5 @@
-import mainPrincipal from '../Apis/mainPrincipal.js';
-import rickAndMortyInicio from './rickAndMorty/inicio.js'
+import mainPrincipal from '../../scripts/services/mainPrincipal.js';
+import rickAndMortyInicio from '../../pages/Inicio.js'
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
 export default async function main() {

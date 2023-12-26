@@ -1,4 +1,4 @@
-import { personaje } from "../../Apis/rickAndMorty";
+import { personaje } from "../scripts/api/rickAndMorty";
 
 const container = document.querySelector('#character');
 const loader = document.querySelector('#lds-ring');

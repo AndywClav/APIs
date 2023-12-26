@@ -1,6 +1,6 @@
 export default async function mainPrincipal() {
     try {
-        const response = await fetch("/pestanias.json");
+        const response = await fetch("../../data/pestanias.json");
 
         if (!response.ok) {
             throw new Error(`Error al realizar la solicitud. Código de estado: ${response.status}`);

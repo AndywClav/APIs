@@ -9,7 +9,16 @@
     grid-template-rows: auto 1fr auto;
 } */
 
+/* https://media0.giphy.com/media/WysKxC4FjN51mAYolG/giphy.gif?cid=ecf05e47ggtgp4bpn1e5ed7skauvcllz0w4zi970f3n3xhn6&ep=v1_stickers_search&rid=giphy.gif&ct=s */
+
+/* agregar al header del rick and morty */
+
 #characters {
+    /* background: url(https://media0.giphy.com/media/KDQ25pahVfwGRvvT9X/giphy.gif?cid=ecf05e47n99a5c59kv04st8vmotlb4dc5mgqv3bofvbyie2i&ep=v1_gifs_search&rid=giphy.gif&ct=g); */
+    background: url(https://media1.giphy.com/media/3oEduU2JjgQUGKyNvG/giphy.gif?cid=ecf05e47o934ulmt5jfm3pt8i1rhb8zv3b09s9ogbx5ji1iu&ep=v1_gifs_search&rid=giphy.gif&ct=g);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
     padding: 4rem;
     display: flex;
     flex-wrap: wrap;

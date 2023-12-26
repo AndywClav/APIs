@@ -48,7 +48,7 @@
             "Id": "2",
             "Img": "https://picsum.photos/250/",
             "Titulo": "Clima",
-            "Descripcion": "La API del clima brinda Pronósticos y análisis con datos de temperatura, humedad y viento. Esencial para profesionales. ¡Explora el clima",
+            "Descripcion": "La API del clima brinda Pronósticos y análisis con datos de temperatura, humedad y viento.",
             "Enlace": "a"
         }]
     }

@@ -1,31 +1,34 @@
-import { personajes } from "../../Apis/rickAndMorty.js";
+import { personajes } from "../scripts/services/rickAndMorty.js";
 
 const charactersList = async (page = 1) => {
     const container = document.querySelector('#characters');
     const loader = document.querySelector('#lds-ring');
+    const { results } = await personajes(page);
 
     loader.style.display = 'grid';
-    const { results } = await personajes(page);
-    loader.style.display = 'none';
 
-    results.forEach(character => {
-        const article = document.createElement('article');
-        article.setAttribute('class', 'character');
-        article.innerHTML = `
-        <img src="${character.image}" alt="">
-        <h2>${character.name}</h2>
-        <div>
-            <p>${character.species}</p>
-            <p class="${character.status.toLowerCase()}"></p>
-        </div>
-        <a href=" /#/${character.id}">Ver detalle</a>
-        `
-        container.appendChild(article);
-    });
+    setTimeout(() => {
+        loader.style.display = 'none';
 
-
+        results.forEach(character => {
+            const article = document.createElement('article');
+            article.setAttribute('class', 'character');
+            article.innerHTML = `
+            <img src="${character.image}" alt="">
+            <h2>${character.name}</h2>
+            <div>
+                <p>${character.species}</p>
+                <p class="${character.status.toLowerCase()}"></p>
+            </div>
+            <a href=" /#/${character.id}">Ver detalle</a> 
+            ` 
+            container.appendChild(article);
+        });
+    }, 2000)
+    
     window.addEventListener('hashchange', () => {
         const id = location.hash.slice(1).toLocaleLowerCase().split('/')[1] || '/';
+        
         localStorage.setItem('charID', id);
         window.location.replace('../pages/characters.html');
     })

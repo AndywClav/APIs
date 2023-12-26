@@ -1,4 +1,4 @@
-import mainPrincipal from '../Apis/mainPrincipal.js';
+import mainPrincipal from '../../scripts/api/mainPrincipal.js';
 
 async function header() {
     try {

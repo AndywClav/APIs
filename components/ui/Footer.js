@@ -1,6 +1,6 @@
-import mainPrincipal from '../Apis/mainPrincipal.js';
+import mainPrincipal from '../../scripts/api/mainPrincipal.js';
 
-async function footer() {
+async function Footer() {
     try {
         const pestanias = await mainPrincipal();
 
@@ -27,4 +27,4 @@ async function footer() {
     }
 }
 
-export default footer;
+export default Footer;
