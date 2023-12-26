@@ -1,4 +1,4 @@
-import mainPrincipal from '../../scripts/api/mainPrincipal.js';
+import mainPrincipal from '../../scripts/services/mainPrincipal.js';
 
 async function Footer() {
     try {
